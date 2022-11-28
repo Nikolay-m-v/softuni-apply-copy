@@ -104,7 +104,7 @@ header ul {
 
 header a {
   text-decoration: none;
-  padding: 6px 10px;
+  padding: 6px 8px;
 }
 
 header ul span {
@@ -116,6 +116,10 @@ header ul span {
 .cell-arrow {
   content: url("https://softuni.bg/Content/images/header/see-more-arrow.svg");
   margin-left: 8px;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  border-top: 5px solid transparent;
+  border-bottom: none;
 }
 
 .header-buttons {
@@ -131,7 +135,7 @@ header ul span {
 }
 
 .search-button {
-  padding: 7px 12px 5px 6px;
+  padding: 8px 12px 5px 6px;
 }
 
 .login-button {
