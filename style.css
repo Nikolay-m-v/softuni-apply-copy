@@ -2,16 +2,32 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: Font;
+}
+
+@font-face {
+  font-family: Font;
+  src: url(fonts/KFOmCnqEu92Fr1Mu4mxK.woff2);
+}
+
+body {
+  font-family: Font;
+}
+
+.page-wrapper {
+  background-color: #234465;
 }
 
 header {
-  width: 100%;
+  width: 1280px;
   height: 68px;
+  margin: 0 auto;
   background-color: #234465;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 50px;
 }
 
 header ul {
@@ -30,7 +46,7 @@ header ul {
 
 .logo-dropdown i img:hover {
   transform: rotate(90deg);
-  transition: 1s;
+  transition: 0.6s;
 }
 
 .logo-dropdown a {
@@ -79,4 +95,56 @@ header ul {
   height: 1px;
   opacity: 0.2;
   background-color: #fff;
+}
+
+header ul {
+  display: flex;
+  gap: 16px;
+}
+
+header a {
+  text-decoration: none;
+  padding: 6px 10px;
+}
+
+header ul span {
+  text-decoration: none;
+  color: #fff;
+  font-size: 12px;
+}
+
+.cell-arrow {
+  content: url("https://softuni.bg/Content/images/header/see-more-arrow.svg");
+  margin-left: 8px;
+}
+
+.header-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+}
+
+.search-button img {
+  width: 32px;
+  height: 16px;
+}
+
+.search-button {
+  padding: 7px 12px 5px 6px;
+}
+
+.login-button {
+  background-color: #ffa000;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 10px 18px;
+  border-radius: 24px;
+  font-size: 12px;
+  box-shadow: 2px 2px 2px #0d0f11;
+  font-weight: 800;
+}
+
+.login-button:hover {
+  box-shadow: none;
 }
