@@ -121,10 +121,6 @@ header ul span {
 .cell-arrow {
   content: url("https://softuni.bg/Content/images/header/see-more-arrow.svg");
   margin-left: 8px;
-  /* border-right: 5px solid transparent;
-  border-left: 5px solid transparent;
-  border-top: 5px solid transparent;
-  border-bottom: none; */
 }
 
 .header-buttons {
@@ -158,21 +154,88 @@ header ul span {
   box-shadow: none;
 }
 
+.hidden-header a:hover {
+  box-shadow: none;
+}
+
 .programs {
   position: relative;
 }
 
 .hidden-menu {
   display: none;
-  /* height: 150px;
+  /* height: 150px; */
   width: 904px;
-  outline: 1px solid red; */
+  outline: 1px solid red;
+  background-color: #fff;
 }
 
-/* .programs:focus + .hidden-menu {
+.programs:hover + .hidden-menu {
   display: block;
   position: absolute;
-} */
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 2fr 6fr;
+}
+
+.hidden-header {
+  margin: 24px;
+  padding: 24px;
+  background-color: #fff8e1;
+  color: #ffa000;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  align-items: center;
+  justify-items: center;
+}
+
+.hidden-header h2 {
+  font-size: 18px;
+}
+
+.hidden-header a {
+  padding: 8px 36px;
+  background-color: #ffa000;
+  box-shadow: 2px 2px 2px #0d0f11;
+  border-radius: 100px;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.hidden-links {
+  display: flex;
+  flex-flow: column;
+}
+
+.left-column {
+  display: flex;
+  flex-flow: column;
+}
+
+.left-column span {
+  display: flex;
+  font-weight: 700;
+  gap: 5px;
+  font-size: 13px;
+  color: #000000;
+  padding: 16px;
+}
+
+.left-column img {
+  width: 18px;
+  height: 18px;
+  fill: #000000;
+}
+
+.QA-engineer {
+  cursor: pointer;
+  color: rgb(61, 59, 59);
+}
 
 .container {
   display: flex;
