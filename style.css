@@ -34,6 +34,10 @@ header ul {
   list-style: none;
 }
 
+.main-title {
+  font-weight: 700;
+}
+
 .main-nav:hover {
   background-color: #306085;
   border-radius: 2px;
