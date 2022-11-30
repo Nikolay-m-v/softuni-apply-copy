@@ -1,0 +1,634 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Font;
+}
+
+@font-face {
+  font-family: Font;
+  src: url(/fonts/Montserrat-VariableFont_wght.ttf);
+}
+
+body {
+  font-family: Font;
+}
+
+.page-wrapper {
+  background-color: #234465;
+}
+
+header {
+  width: 1280px;
+  height: 68px;
+  margin: 0 auto;
+  background-color: #234465;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+header ul {
+  list-style: none;
+}
+
+.main-title {
+  font-weight: 700;
+}
+
+.main-nav:hover {
+  background-color: #306085;
+  border-radius: 2px;
+}
+
+.logo-dropdown {
+  display: flex;
+  align-items: center;
+}
+
+.logo-dropdown i {
+  padding-right: 20px;
+  cursor: pointer;
+}
+
+.logo-dropdown i img:hover {
+  transform: rotate(90deg);
+  transition: 0.6s;
+}
+
+.logo-dropdown a {
+  display: block;
+}
+
+.hidden-nav {
+  display: none;
+  position: absolute;
+  top: 52px;
+  width: 145px;
+  background-color: #234465;
+  list-style: none;
+  border-radius: 8px;
+}
+
+.hidden-nav img {
+  width: 100px;
+  height: 40px;
+  margin-left: 10px;
+}
+
+.hidden-nav a {
+  padding: 12px 16px;
+  position: relative;
+  display: block;
+}
+
+.logo-dropdown:hover + .hidden-nav {
+  display: block;
+  position: absolute;
+  z-index: 1;
+}
+
+.hidden-nav:hover {
+  display: inline-block;
+}
+
+.hidden-nav a::after {
+  content: "";
+  position: absolute;
+  left: 5%;
+  bottom: 0;
+  margin: 0 auto;
+  width: 90%;
+  height: 1px;
+  opacity: 0.2;
+  background-color: #fff;
+}
+
+header ul {
+  display: flex;
+  gap: 16px;
+}
+
+header a {
+  text-decoration: none;
+  padding: 3px 5px;
+}
+
+header ul span {
+  text-decoration: none;
+  color: #fff;
+  font-size: 12px;
+}
+
+.cell-arrow {
+  content: url("https://softuni.bg/Content/images/header/see-more-arrow.svg");
+  margin-left: 8px;
+}
+
+.header-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+}
+
+.search-button img {
+  width: 32px;
+  height: 16px;
+}
+
+.search-button {
+  padding: 8px 12px 5px 6px;
+}
+
+.login-button {
+  background-color: #ffa000;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 10px 18px;
+  border-radius: 24px;
+  font-size: 12px;
+  box-shadow: 2px 2px 2px #0d0f11;
+  font-weight: 800;
+}
+
+.login-button:hover {
+  box-shadow: none;
+}
+
+.hidden-header a:hover {
+  box-shadow: none;
+}
+
+.programs {
+  position: relative;
+}
+
+.courses {
+  position: relative;
+}
+
+.hidden-menu {
+  display: none;
+  width: 904px;
+  background-color: #fff;
+  border-radius: 6px;
+  z-index: 1;
+}
+
+.programs:hover + .hidden-menu {
+  display: block;
+  position: absolute;
+}
+
+.courses:hover + .hidden-menu {
+  display: block;
+  position: absolute;
+}
+
+.hidden-menu:hover {
+  display: block;
+  position: absolute;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 3fr 8fr;
+}
+
+.hidden-header {
+  margin: 24px;
+  padding: 24px;
+  font-size: 14px;
+  background-color: #fff8e1;
+  color: #ffa000;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  align-items: center;
+  justify-items: center;
+}
+
+.trainings h2 {
+  color: #ffa000;
+  font-size: 14px;
+  font-weight: 700;
+  margin: 20px 0;
+}
+
+.grid-container-trainings {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.hidden-header h2 {
+  font-size: 18px;
+}
+
+.hidden-header a {
+  padding: 8px 36px;
+  background-color: #ffa000;
+  box-shadow: 2px 2px 2px #0d0f11;
+  border-radius: 100px;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.hidden-links {
+  display: flex;
+  flex-flow: column;
+  margin-bottom: 20px;
+}
+
+.hidden-links a,
+.grid-container-trainings a {
+  margin-left: 32px;
+  padding: 8px 0;
+  color: #306085;
+}
+
+.hidden-links a:hover,
+.grid-container-trainings a:hover {
+  font-weight: 700;
+}
+
+.trainings {
+  border-top: 1px solid #b8b6b6;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.grid-container-trainings h2 {
+  color: #ffa000;
+  font-size: 14px;
+  font-weight: 700;
+  margin: 20px 0 6px 24px;
+}
+
+.grid-container-trainings a {
+  margin-left: 40px;
+  margin-bottom: 8px;
+}
+
+.left-column {
+  display: flex;
+  flex-flow: column;
+  background-color: #f8f8f8;
+}
+
+.left-column-white {
+  display: flex;
+  flex-flow: column;
+  background-color: #fff;
+}
+
+.left-column span {
+  display: flex;
+  font-weight: 700;
+  gap: 5px;
+  font-size: 13px;
+  color: #000;
+  padding: 16px;
+}
+
+.left-column img {
+  width: 18px;
+  height: 18px;
+  fill: #000;
+}
+
+.right-column {
+  display: flex;
+  flex-flow: column;
+}
+
+.about-us:hover + .hidden-menu-about-us {
+  display: block;
+  position: absolute;
+}
+
+.hidden-menu-about-us:hover {
+  display: block;
+  position: absolute;
+}
+
+.hidden-menu-about-us {
+  display: none;
+  background-color: #fff;
+  border-radius: 6px;
+  z-index: 1;
+}
+
+.flex-container {
+  display: flex;
+  flex-flow: column;
+  width: 320px;
+  margin: 24px 0;
+}
+
+.flex-container a {
+  margin-bottom: 12px;
+  margin-left: 16px;
+  color: #306085;
+}
+
+.flex-container a:hover {
+  font-weight: 700;
+}
+
+.software-engineer {
+  border-left: 3px solid #ffa000;
+  background-color: #fff;
+}
+
+.qa-engineer {
+  cursor: pointer;
+  color: rgb(61, 59, 59);
+}
+
+.container {
+  display: flex;
+  background: #397096;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-wrapper {
+  width: 1200px;
+  display: flex;
+}
+
+.hero-container {
+  padding-top: 48px;
+}
+
+.hero-container h1,
+.hero-container p {
+  color: #fff;
+}
+
+.hero-container h1 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.hero-container ul {
+  margin-bottom: 40px;
+}
+
+.important-description {
+  margin-bottom: 40px;
+}
+
+.checkmarks li {
+  list-style: none;
+  display: flex;
+  margin-bottom: 14px;
+}
+
+.hero-container span {
+  background-image: url("https://softuni.bg/Content/images/icons/check-icon-yellow.svg");
+  background-color: #fff;
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 18px;
+}
+
+.hero-container a {
+  padding: 16px 42px;
+  background-color: #ffa000;
+  box-shadow: 2px 2px 2px #0d0f11;
+  border-radius: 100px;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.hero-container a:hover {
+  box-shadow: none;
+}
+
+.video-container {
+  margin-top: 98px;
+}
+
+.video {
+  width: 480px;
+  height: 276px;
+  position: relative;
+}
+
+.video-image {
+  width: 100%;
+  height: 100%;
+  border: 4px solid #ffa000;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+
+.play-video-button {
+  content: "";
+  position: absolute;
+  width: 42px;
+  height: 42px;
+  left: 46%;
+  top: 44%;
+  border-radius: 50%;
+  background-color: #ffa000;
+  background-image: url("https://softuni.bg/Content/images/apply-page/header-video-play-button-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: 16px;
+}
+
+.play-video-button:hover {
+  transform: scale(1.2);
+  transition: all 0.6s ease-in-out;
+}
+
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.video-rotator {
+  position: absolute;
+  width: 61px;
+  height: 60px;
+  top: 41%;
+  left: 44%;
+  -webkit-animation: spin 8s linear infinite;
+  -moz-animation: spin 8s linear infinite;
+  animation: spin 8s linear infinite;
+}
+
+.video-rotator:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.video p {
+  color: #bedae6;
+  text-align: center;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.reviews {
+  display: flex;
+  gap: 20px;
+  margin-top: 50px;
+}
+
+.reviews ul {
+  display: flex;
+}
+
+.reviews li {
+  list-style: none;
+}
+
+.review-imgs img {
+  border-radius: 50px;
+  border: 2px solid #ffa000;
+  width: 46px;
+  height: 46px;
+}
+
+.push-left {
+  margin-right: -10px;
+}
+
+.ratings {
+  display: flex;
+  flex-flow: column;
+  height: 20px;
+}
+
+.stars {
+  height: 26px;
+}
+
+.stars ul {
+  display: flex;
+  gap: 15px;
+}
+
+.ratings img {
+  width: 19px;
+  height: 19px;
+}
+
+.apply-container-technologies {
+  background-color: #f8f8f8;
+}
+
+.container-technologies {
+  width: 1200px;
+  padding: 64px 0;
+  display: grid;
+  grid-template-columns: 5fr 3fr;
+  margin: 0 auto;
+  gap: 50px;
+}
+
+.technologies-info h2,
+.program-info h2,
+.container-pros h2 {
+  font-size: 30px;
+  font-weight: 800;
+  color: #234465;
+  margin-bottom: 24px;
+}
+
+.technologies-info p {
+  color: #234465;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.technologies-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.technologies-icons img {
+  width: 51px;
+  height: 58px;
+}
+
+.container-program {
+  width: 1200px;
+  padding: 64px 0;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 5fr 3fr;
+  gap: 24px;
+}
+
+.program-info p {
+  margin-bottom: 20px;
+}
+
+.program-info li,
+.container-pros li {
+  display: flex;
+}
+
+.program-info span,
+.container-pros span {
+  background-image: url("https://softuni.bg/Content/images/icons/check-icon-yellow.svg");
+  height: 20px;
+  width: 20px;
+  margin-right: 20px;
+}
+
+.apply-container-pros {
+  background-color: #f8f8f8;
+}
+
+.container-pros {
+  margin: 0 auto;
+  width: 1200px;
+  padding: 64px 0;
+}
+
+.container-pros ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 34px;
+  gap: 14px;
+}
+
+.container-pros h3,
+.container-pros p {
+  color: #565656;
+}
+
+.container-pros div h3 {
+  font-weight: 600;
+  margin-bottom: 6px;
+  line-height: 19px;
+}
