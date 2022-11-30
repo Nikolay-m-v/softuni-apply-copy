@@ -1,20 +1,29 @@
 * {
   box-sizing: border-box;
+}
+
+body,
+ul,
+ol {
   margin: 0;
   padding: 0;
-  font-family: Font;
 }
 
 @font-face {
-  font-family: Font;
+  font-family: "Montserrat", sans-serif;
+  /* Fix to use woff2 */
   src: url(/fonts/Montserrat-VariableFont_wght.ttf);
 }
 
 body {
-  font-family: Font;
+  font-family: "Montserrat", sans-serif;
 }
 
-.page-wrapper {
+a {
+  text-decoration: none;
+}
+
+.header-wrapper {
   background-color: #234465;
 }
 
@@ -22,16 +31,11 @@ header {
   width: 1280px;
   height: 68px;
   margin: 0 auto;
-  background-color: #234465;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 50px;
-}
-
-header ul {
-  list-style: none;
 }
 
 .main-title {
@@ -43,13 +47,17 @@ header ul {
   border-radius: 2px;
 }
 
+.softuni-brands-dropdown {
+  position: relative;
+}
+
 .logo-dropdown {
   display: flex;
   align-items: center;
+  gap: 20px;
 }
 
 .logo-dropdown i {
-  padding-right: 20px;
   cursor: pointer;
 }
 
@@ -65,11 +73,11 @@ header ul {
 .hidden-nav {
   display: none;
   position: absolute;
-  top: 52px;
   width: 145px;
   background-color: #234465;
   list-style: none;
-  border-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
 }
 
 .hidden-nav img {
@@ -109,17 +117,21 @@ header ul {
 header ul {
   display: flex;
   gap: 16px;
+  list-style: none;
 }
 
 header a {
-  text-decoration: none;
-  padding: 3px 5px;
+  padding: 6px 8px;
 }
 
 header ul span {
   text-decoration: none;
   color: #fff;
   font-size: 12px;
+}
+
+header ul li {
+  position: relative;
 }
 
 .cell-arrow {
@@ -162,30 +174,32 @@ header ul span {
   box-shadow: none;
 }
 
-.programs {
-  position: relative;
-}
-
-.courses {
+.dropdown-trigger {
   position: relative;
 }
 
 .hidden-menu {
   display: none;
   width: 904px;
+  position: absolute;
   background-color: #fff;
   border-radius: 6px;
   z-index: 1;
+  top: 42px;
 }
 
-.programs:hover + .hidden-menu {
+// Transparent strip of element to make hover work
+.hidden-menu::before {
+  content: "";
   display: block;
   position: absolute;
+  top: -20px;
+  height: 20px;
+  width: 100%;
 }
 
-.courses:hover + .hidden-menu {
+.dropdown-trigger:hover + .hidden-menu {
   display: block;
-  position: absolute;
 }
 
 .hidden-menu:hover {
