@@ -562,7 +562,8 @@ header ul span {
 }
 
 .technologies-info h2,
-.program-info h2 {
+.program-info h2,
+.container-pros h2 {
   font-size: 30px;
   font-weight: 800;
   color: #234465;
@@ -600,13 +601,43 @@ header ul span {
   margin-bottom: 20px;
 }
 
-.program-info li {
+.program-info li,
+.container-pros li {
   display: flex;
 }
 
-.program-info span {
+.program-info span,
+.container-pros span {
   background-image: url("https://softuni.bg/Content/images/icons/check-icon-yellow.svg");
   height: 20px;
   width: 20px;
   margin-right: 20px;
+}
+
+.apply-container-pros {
+  background-color: #f8f8f8;
+}
+
+.container-pros {
+  margin: 0 auto;
+  width: 1200px;
+  padding: 64px 0;
+}
+
+.container-pros ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 34px;
+  gap: 14px;
+}
+
+.container-pros h3,
+.container-pros p {
+  color: #565656;
+}
+
+.container-pros div h3 {
+  font-weight: 600;
+  margin-bottom: 6px;
+  line-height: 19px;
 }
