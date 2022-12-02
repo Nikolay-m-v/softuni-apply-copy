@@ -11,8 +11,7 @@ ol {
 
 @font-face {
   font-family: "Montserrat", sans-serif;
-  /* Fix to use woff2 */
-  src: url(/fonts/Montserrat-VariableFont_wght.ttf);
+  src: url(/fonts/Montserrat-VariableFont_wght.woff2);
 }
 
 body {
@@ -193,7 +192,6 @@ header ul li {
   top: 42px;
 }
 
-// Transparent strip of element to make hover work
 .hidden-menu::before {
   content: "";
   display: block;
