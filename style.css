@@ -243,7 +243,7 @@ header ul li {
   font-size: 18px;
 }
 
-.hidden-header a {
+.apply-btn {
   padding: 8px 36px;
   background-color: #ffa000;
   box-shadow: 2px 2px 2px #0d0f11;
@@ -727,4 +727,48 @@ header ul li {
   position: absolute;
   right: -243px;
   bottom: -107px;
+}
+
+.apply-container {
+  display: flex;
+  justify-content: center;
+}
+
+.apply-container-content {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  padding: 60px 0;
+}
+
+.apply-content-info {
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+  color: #234465;
+}
+
+.apply-content-info h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+}
+
+.apply-content-info p {
+  align-self: center;
+  width: 550px;
+}
+
+.apply-steps {
+  display: flex;
+}
+
+.step-1,
+.step-2,
+.step-3,
+.step-4 {
+  width: 276px;
+  height: 430px;
+  padding: 24px 16px 40px 16px;
+  text-align: start;
 }
