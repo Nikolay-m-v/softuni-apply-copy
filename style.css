@@ -663,18 +663,26 @@ header ul li {
 
 .top-row,
 .bottom-row {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  width: 625px;
   gap: 25px;
+}
+
+.container-stats-info {
+  text-align: end;
 }
 
 .container-stats-info h1 {
   font-size: 72px;
-  margin: 34px;
+  margin: 34px 0;
+  justify-self: end;
+  width: 228px;
 }
 
 .container-stats-info span {
   align-self: center;
-  width: 228px;
+  text-align: start;
 }
 
 .container-stats-imgs {
