@@ -80,6 +80,11 @@ header {
   border-bottom-left-radius: 8px;
 }
 
+.hidden-nav ul {
+  display: flex;
+  flex-flow: column;
+}
+
 .hidden-nav img {
   width: 100px;
   height: 40px;
