@@ -398,14 +398,10 @@ header ul li {
   margin-bottom: 40px;
 }
 
-.important-description {
-  margin-bottom: 40px;
-}
-
 .checkmarks li {
-  list-style: none;
   display: flex;
-  margin-bottom: 14px;
+  align-items: center;
+  list-style: none;
 }
 
 .hero-container span {
@@ -605,13 +601,10 @@ header ul li {
   gap: 24px;
 }
 
-.program-info p {
-  margin-bottom: 20px;
-}
-
 .program-info li,
 .container-pros li {
   display: flex;
+  align-items: center;
 }
 
 .program-info span,
@@ -635,7 +628,6 @@ header ul li {
 .container-pros ul {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-column-gap: 34px;
   gap: 14px;
 }
 
@@ -648,4 +640,8 @@ header ul li {
   font-weight: 600;
   margin-bottom: 6px;
   line-height: 19px;
+}
+
+.container-pros span {
+  margin-bottom: 30px;
 }
