@@ -645,3 +645,78 @@ header ul li {
 .container-pros span {
   margin-bottom: 30px;
 }
+
+.apply-container-stats {
+  background-color: #234465;
+}
+
+.container-stats {
+  display: flex;
+  justify-content: center;
+}
+
+.container-stats-info {
+  display: flex;
+  flex-flow: column;
+  color: #fff;
+}
+
+.top-row,
+.bottom-row {
+  display: flex;
+  gap: 25px;
+}
+
+.container-stats-info h1 {
+  font-size: 72px;
+  margin: 34px;
+}
+
+.container-stats-info span {
+  align-self: center;
+  width: 228px;
+}
+
+.container-stats-imgs {
+  position: relative;
+  width: 335px;
+  height: 228px;
+}
+
+.container-stats-imgs img {
+  border-radius: 10px;
+}
+
+.top-img {
+  position: absolute;
+  left: 130px;
+  top: -30px;
+  z-index: 4;
+}
+
+.bottomleft-img {
+  position: absolute;
+  bottom: -105px;
+  left: 108px;
+  z-index: 4;
+}
+
+.mid-img {
+  position: absolute;
+  top: 30px;
+  right: -192px;
+  z-index: 2;
+}
+
+.midleft-img {
+  position: absolute;
+  left: 50px;
+  top: 30px;
+  z-index: 1;
+}
+
+.bottomright-img {
+  position: absolute;
+  right: -243px;
+  bottom: -107px;
+}
