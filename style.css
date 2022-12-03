@@ -985,3 +985,25 @@ header ul li {
 .benefits-info {
   text-align: start;
 }
+
+.container-teachers {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+  gap: 40px;
+  padding: 60px 0;
+}
+
+.teachers-info {
+  width: 680px;
+}
+
+.teachers-info h2 {
+  color: #234465;
+  font-size: 34px;
+}
+
+.teachers-info p {
+  color: #565656;
+  letter-spacing: 0.1px;
+}
