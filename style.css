@@ -901,3 +901,83 @@ header ul li {
 .apply-container-content .apply-btn:hover {
   box-shadow: none;
 }
+
+.apply-container-benefits {
+  display: flex;
+  justify-content: center;
+  background-color: #fff8e1;
+  height: 320px;
+}
+
+.container-benefits {
+  display: flex;
+  gap: 150px;
+  padding: 24px 0;
+}
+
+.benefits-info {
+  width: 635px;
+  color: #565656;
+  padding: 10px 0;
+}
+
+.benefits-info ul {
+  list-style: none;
+}
+
+.benefits-info li {
+  position: relative;
+}
+
+.benefits-info p {
+  width: 600px;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.benefits-images {
+  position: relative;
+  width: 327px;
+  height: 225px;
+}
+
+.benefits-images img {
+  position: absolute;
+}
+
+.img-1 {
+  top: -45px;
+  right: -90px;
+  z-index: 3;
+}
+
+.img-2 {
+  bottom: -135px;
+  left: -60px;
+  z-index: 2;
+}
+
+.img-3 {
+  bottom: -92px;
+  right: 112px;
+  z-index: 1;
+}
+
+.benefits-info li {
+  display: flex;
+}
+
+.benefits-info .checklist-icon {
+  background-image: url("https://softuni.bg/Content/images/icons/check-icon-yellow.svg");
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background-size: contain;
+  z-index: 1;
+}
+
+.benefits-info {
+  text-align: start;
+}
