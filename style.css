@@ -538,6 +538,10 @@ header ul li {
   height: 20px;
 }
 
+.ratings p {
+  margin-top: 2px;
+}
+
 .stars {
   height: 26px;
 }
