@@ -1232,6 +1232,7 @@ header ul li {
   height: 40px;
   width: 40px;
   z-index: 1;
+  cursor: pointer;
 }
 
 .right-arrow {
