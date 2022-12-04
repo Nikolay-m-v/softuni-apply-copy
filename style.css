@@ -1065,6 +1065,7 @@ header ul li {
 
 .faqs li {
   display: flex;
+  flex-flow: column;
   justify-content: space-between;
   background-color: #ffedb3;
   height: 52px;
@@ -1082,8 +1083,13 @@ header ul li {
   cursor: pointer;
 }
 
-.faqs img {
-  transition: transform 1.2s ease-in-out;
+.faqs-hoverable:hover .plus-rotator {
+  transform: scale(1.7) rotate(180deg);
+  left: 50%;
+}
+
+.plus-rotator {
+  transition: transform 0.7s ease-in-out;
 }
 
 .faqs img:hover {
@@ -1103,4 +1109,134 @@ header ul li {
   align-self: center;
   background-color: #ffedb3;
   margin-left: 20px;
+}
+
+.show-on-hover {
+  display: none;
+}
+
+.faqs-hoverable {
+  display: flex;
+}
+
+.shown-all-time {
+  display: flex;
+  justify-content: space-between;
+  background-color: #ffedb3;
+  height: 52px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.show-on-hover {
+  width: 797px;
+  padding: 15px 15px;
+  background-color: #fff8e1;
+  top: 52px;
+}
+
+.faqs-hoverable:hover + .show-on-hover {
+  display: block;
+  position: absolute;
+  z-index: 1;
+}
+
+.show-on-hover p {
+  color: #565656;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.hover-container {
+  position: relative;
+}
+
+.apply-container-students {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  background-color: #234465;
+  height: 356px;
+  padding: 48px 45px;
+}
+
+.students-info {
+  display: flex;
+}
+
+.student-photo {
+  height: 144px;
+  width: 144px;
+  border-radius: 50%;
+}
+
+.container-students {
+  width: 1170px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  gap: 50px;
+}
+
+.students-rating {
+  display: flex;
+}
+
+.students-rating img {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+.students-info {
+  display: flex;
+  flex-flow: column;
+  color: #fff;
+}
+
+.students-info h3 {
+  margin: 0 0 10px 0;
+  letter-spacing: 1px;
+}
+
+.students-info h4 {
+  color: #d6d6d6;
+  margin: 0 0 10px 0;
+}
+
+.students-info p {
+  letter-spacing: 0.1px;
+  width: 850px;
+}
+
+.dots {
+  position: absolute;
+  left: -40px;
+  top: 65px;
+}
+
+.arrow {
+  position: absolute;
+  right: 64px;
+  top: 10px;
+  width: 322px;
+  height: 339px;
+}
+
+.apply-container-students button {
+  position: absolute;
+  right: -25px;
+  top: 115px;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  z-index: 1;
+}
+
+.right-arrow {
+  width: 15px;
+  height: 15px;
+  margin-left: 4px;
+  margin-top: 3px;
 }
