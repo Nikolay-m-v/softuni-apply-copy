@@ -60,7 +60,7 @@ header {
   cursor: pointer;
 }
 
-.logo-dropdown i img:hover {
+.logo-dropdown:hover i {
   transform: rotate(90deg);
   transition: 0.6s;
 }
@@ -1216,7 +1216,7 @@ header ul li {
   top: 65px;
 }
 
-.arrow {
+.arrow-img {
   position: absolute;
   right: 64px;
   top: 10px;
