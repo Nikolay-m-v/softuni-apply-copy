@@ -1263,6 +1263,7 @@ header ul li {
   flex-flow: column;
   align-items: center;
   justify-content: center;
+  position: relative;
   gap: 20px;
 }
 
@@ -1304,4 +1305,23 @@ header ul li {
 .partner-icons-row3 {
   display: flex;
   justify-content: space-between;
+}
+
+.partners-icons button {
+  position: absolute;
+  right: -45px;
+  top: 75px;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.partners-icons .right-arrow {
+  width: 15px;
+  height: 15px;
+  padding: 0;
+  margin-left: 4px;
+  margin-top: 3px;
 }
