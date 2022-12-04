@@ -1241,3 +1241,67 @@ header ul li {
   margin-left: 4px;
   margin-top: 3px;
 }
+
+.apply-container-partners {
+  display: flex;
+  justify-content: center;
+}
+
+.container-partners {
+  width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 90px;
+  margin-bottom: 48px;
+  gap: 100px;
+}
+
+.partners-icons {
+  width: 480px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.partners-icons img {
+  height: 48px;
+  padding: 0 17px;
+}
+
+.partners-info {
+  display: flex;
+  flex-flow: column;
+}
+
+.partners-info h1 {
+  color: #234465;
+  margin-bottom: 10px;
+}
+
+.partners-info p {
+  color: #565656;
+  margin-bottom: 40px;
+}
+
+.partners-info button {
+  width: 240px;
+  font-size: 16px;
+  box-shadow: 1px 1px 1px 1px #a09f9f;
+  border: none;
+  padding: 15px 0;
+  margin-bottom: 20px;
+}
+
+.partners-info button:hover {
+  box-shadow: none;
+}
+
+.partner-icons-row1,
+.partner-icons-row2,
+.partner-icons-row3 {
+  display: flex;
+  justify-content: space-between;
+}
