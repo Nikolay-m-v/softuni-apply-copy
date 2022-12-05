@@ -139,6 +139,14 @@ header ul li {
 }
 
 .cell-arrow {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid rgb(255, 255, 255);
+}
+
+.cell-arrow {
   content: url("https://softuni.bg/Content/images/header/see-more-arrow.svg");
   margin-left: 8px;
 }
@@ -188,7 +196,7 @@ header ul li {
   position: absolute;
   background-color: #fff;
   border-radius: 6px;
-  z-index: 1;
+  z-index: 5;
   top: 42px;
 }
 
@@ -239,8 +247,9 @@ header ul li {
   grid-template-columns: 1fr 1fr;
 }
 
-.hidden-header h2 {
+.hidden-header h4 {
   font-size: 18px;
+  font-weight: 200;
 }
 
 .apply-btn {
@@ -333,11 +342,25 @@ header ul li {
   position: absolute;
 }
 
+.about-us {
+  position: relative;
+}
+
 .hidden-menu-about-us {
   display: none;
   background-color: #fff;
+  top: 44px;
   border-radius: 6px;
-  z-index: 1;
+  z-index: 3;
+}
+
+.hidden-menu-about-us::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -22px;
+  height: 24px;
+  width: 100%;
 }
 
 .flex-container {
@@ -360,11 +383,12 @@ header ul li {
 .software-engineer {
   border-left: 3px solid #ffa000;
   background-color: #fff;
+  font-weight: 200;
 }
 
-.qa-engineer {
+.left-column .qa-engineer {
   cursor: pointer;
-  color: rgb(61, 59, 59);
+  color: rgb(143, 141, 141);
 }
 
 .container {
@@ -377,15 +401,15 @@ header ul li {
 .content-wrapper {
   width: 1200px;
   display: flex;
-}
-
-.hero-container {
-  padding-top: 48px;
+  gap: 20px;
+  position: relative;
+  padding-top: 24px;
 }
 
 .hero-container h1,
 .hero-container p {
   color: #fff;
+  font-weight: 700;
 }
 
 .hero-container h1 {
@@ -404,7 +428,12 @@ header ul li {
   list-style: none;
 }
 
-.hero-container span {
+.checkmarks p {
+  margin: 6px 0;
+  font-weight: 200;
+}
+
+.checkmarked {
   background-image: url("https://softuni.bg/Content/images/icons/check-icon-yellow.svg");
   background-color: #fff;
   display: block;
@@ -416,13 +445,6 @@ header ul li {
 
 .hero-container a {
   padding: 16px 42px;
-  background-color: #ffa000;
-  box-shadow: 2px 2px 2px #0d0f11;
-  border-radius: 100px;
-  text-decoration: none;
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: 700;
   font-size: 16px;
 }
 
@@ -430,14 +452,48 @@ header ul li {
   box-shadow: none;
 }
 
+.arrow-down-btn {
+  width: 8px;
+  height: 8px;
+  border: 2px solid rgb(255, 255, 255);
+  border-left: 0;
+  border-top: 0;
+  transform: rotate(45deg);
+  position: absolute;
+  bottom: 35px;
+  right: 50%;
+  cursor: pointer;
+}
+
 .video-container {
-  margin-top: 98px;
+  margin-top: 112px;
+}
+
+.video-container p {
+  justify-self: flex-end;
+}
+
+.video-container p {
+  color: #bedae6;
+  text-align: center;
+  align-self: flex-end;
+  font-size: 14px;
+  line-height: 16px;
 }
 
 .video {
   width: 480px;
   height: 276px;
   position: relative;
+  display: flex;
+  flex-flow: column;
+}
+
+.dots-video {
+  position: absolute;
+  bottom: -108px;
+  right: -64px;
+  z-index: 0;
 }
 
 .video-image {
@@ -446,6 +502,8 @@ header ul li {
   border: 4px solid #ffa000;
   border-radius: 4px;
   margin-bottom: 12px;
+  position: absolute;
+  z-index: 2;
 }
 
 .play-video-button {
@@ -455,6 +513,7 @@ header ul li {
   height: 42px;
   left: 46%;
   top: 44%;
+  z-index: 3;
   border-radius: 50%;
   background-color: #ffa000;
   background-image: url("https://softuni.bg/Content/images/apply-page/header-video-play-button-arrow.svg");
@@ -490,6 +549,7 @@ header ul li {
   height: 60px;
   top: 41%;
   left: 44%;
+  z-index: 4;
   -webkit-animation: spin 8s linear infinite;
   -moz-animation: spin 8s linear infinite;
   animation: spin 8s linear infinite;
@@ -498,13 +558,6 @@ header ul li {
 .video-rotator:hover {
   transform: scale(1.2);
   cursor: pointer;
-}
-
-.video p {
-  color: #bedae6;
-  text-align: center;
-  font-size: 14px;
-  line-height: 16px;
 }
 
 .reviews {
