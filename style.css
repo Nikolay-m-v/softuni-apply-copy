@@ -1378,3 +1378,51 @@ header ul li {
   margin-left: 4px;
   margin-top: 3px;
 }
+
+.apply-container-awards {
+  display: flex;
+  justify-content: space-around;
+  background-color: #f8f8f8;
+  padding: 50px 0;
+}
+
+.container-awards {
+  display: flex;
+  width: 1200px;
+  gap: 40px;
+}
+
+.container-awards img {
+  width: 120px;
+  height: 65px;
+}
+
+.award-content {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.award-border {
+  width: 96px;
+  margin: 0 auto;
+  border-bottom: 3px solid #ffa000;
+}
+
+.award-info {
+  width: 260px;
+}
+
+.award-info p:first-child {
+  color: #ffa000;
+  font-size: 17px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.award-info p {
+  color: #565656;
+  text-align: center;
+  align-self: center;
+}
