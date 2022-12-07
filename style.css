@@ -1389,10 +1389,11 @@ header ul li {
 .container-awards {
   display: flex;
   width: 1200px;
+  position: relative;
   gap: 40px;
 }
 
-.container-awards img {
+.award-content img {
   width: 120px;
   height: 65px;
 }
@@ -1425,4 +1426,17 @@ header ul li {
   color: #565656;
   text-align: center;
   align-self: center;
+}
+
+.right-arrow-awards {
+  position: absolute;
+  top: 49%;
+  right: -15px;
+  width: 45px;
+  height: 45px;
+  border: 1px solid rgb(231, 231, 231);
+  box-shadow: 1px 1px 1px #363636;
+  padding: 13px;
+  border-radius: 50%;
+  cursor: pointer;
 }
