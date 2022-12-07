@@ -1383,7 +1383,7 @@ header ul li {
   display: flex;
   justify-content: space-around;
   background-color: #f8f8f8;
-  padding: 50px 0;
+  padding: 65px 0;
 }
 
 .container-awards {
@@ -1439,4 +1439,93 @@ header ul li {
   padding: 13px;
   border-radius: 50%;
   cursor: pointer;
+}
+
+footer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 60px 0;
+  background-color: #193047;
+  overflow: hidden;
+}
+
+.footer-image {
+  position: absolute;
+  right: -25px;
+  bottom: 50px;
+  width: 105px;
+}
+
+.footer-container {
+  width: 1170px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-container ul {
+  list-style: none;
+}
+
+.footer-container li {
+  margin: 12px 0;
+}
+
+.general-li {
+  color: #fff;
+  font-weight: 700;
+}
+
+.footer-container a {
+  font-size: 14px;
+  color: #d6d6d6;
+}
+
+.footer-container a:hover {
+  text-decoration: underline;
+}
+
+.socials-copyright {
+  width: 285px;
+}
+
+.socials ul {
+  display: flex;
+  gap: 20px;
+}
+
+.socials a:hover {
+  filter: contrast(3);
+}
+
+.twitter {
+  width: 19px;
+  height: 18px;
+}
+
+.youtube {
+  width: 26px;
+  height: 18px;
+}
+
+.instagram {
+  width: 18px;
+  height: 18px;
+}
+
+.payment-method {
+  display: flex;
+  gap: 20px;
+  margin: 45px 0;
+}
+
+.payment-method img {
+  border-radius: 4px;
+  width: 80px;
+  height: 41px;
+}
+
+.copyright p {
+  color: #919191;
+  font-size: 13px;
 }
