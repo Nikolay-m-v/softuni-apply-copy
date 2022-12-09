@@ -60,7 +60,7 @@ header {
   cursor: pointer;
 }
 
-.logo-dropdown i img:hover {
+.logo-dropdown:hover i {
   transform: rotate(90deg);
   transition: 0.6s;
 }
@@ -139,6 +139,14 @@ header ul li {
 }
 
 .cell-arrow {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid rgb(255, 255, 255);
+}
+
+.cell-arrow {
   content: url("https://softuni.bg/Content/images/header/see-more-arrow.svg");
   margin-left: 8px;
 }
@@ -188,7 +196,7 @@ header ul li {
   position: absolute;
   background-color: #fff;
   border-radius: 6px;
-  z-index: 1;
+  z-index: 5;
   top: 42px;
 }
 
@@ -239,11 +247,12 @@ header ul li {
   grid-template-columns: 1fr 1fr;
 }
 
-.hidden-header h2 {
+.hidden-header h4 {
   font-size: 18px;
+  font-weight: 200;
 }
 
-.hidden-header a {
+.apply-btn {
   padding: 8px 36px;
   background-color: #ffa000;
   box-shadow: 2px 2px 2px #0d0f11;
@@ -333,11 +342,25 @@ header ul li {
   position: absolute;
 }
 
+.about-us {
+  position: relative;
+}
+
 .hidden-menu-about-us {
   display: none;
   background-color: #fff;
+  top: 44px;
   border-radius: 6px;
-  z-index: 1;
+  z-index: 3;
+}
+
+.hidden-menu-about-us::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -22px;
+  height: 24px;
+  width: 100%;
 }
 
 .flex-container {
@@ -360,11 +383,12 @@ header ul li {
 .software-engineer {
   border-left: 3px solid #ffa000;
   background-color: #fff;
+  font-weight: 200;
 }
 
-.qa-engineer {
+.left-column .qa-engineer {
   cursor: pointer;
-  color: rgb(61, 59, 59);
+  color: rgb(143, 141, 141);
 }
 
 .container {
@@ -377,15 +401,15 @@ header ul li {
 .content-wrapper {
   width: 1200px;
   display: flex;
-}
-
-.hero-container {
-  padding-top: 48px;
+  gap: 20px;
+  position: relative;
+  padding-top: 24px;
 }
 
 .hero-container h1,
 .hero-container p {
   color: #fff;
+  font-weight: 700;
 }
 
 .hero-container h1 {
@@ -404,7 +428,12 @@ header ul li {
   list-style: none;
 }
 
-.hero-container span {
+.checkmarks p {
+  margin: 6px 0;
+  font-weight: 200;
+}
+
+.checkmarked {
   background-image: url("https://softuni.bg/Content/images/icons/check-icon-yellow.svg");
   background-color: #fff;
   display: block;
@@ -416,13 +445,6 @@ header ul li {
 
 .hero-container a {
   padding: 16px 42px;
-  background-color: #ffa000;
-  box-shadow: 2px 2px 2px #0d0f11;
-  border-radius: 100px;
-  text-decoration: none;
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: 700;
   font-size: 16px;
 }
 
@@ -430,14 +452,48 @@ header ul li {
   box-shadow: none;
 }
 
+.arrow-down-btn {
+  width: 8px;
+  height: 8px;
+  border: 2px solid rgb(255, 255, 255);
+  border-left: 0;
+  border-top: 0;
+  transform: rotate(45deg);
+  position: absolute;
+  bottom: 35px;
+  right: 50%;
+  cursor: pointer;
+}
+
 .video-container {
-  margin-top: 98px;
+  margin-top: 112px;
+}
+
+.video-container p {
+  justify-self: flex-end;
+}
+
+.video-container p {
+  color: #bedae6;
+  text-align: center;
+  align-self: flex-end;
+  font-size: 14px;
+  line-height: 16px;
 }
 
 .video {
   width: 480px;
   height: 276px;
   position: relative;
+  display: flex;
+  flex-flow: column;
+}
+
+.dots-video {
+  position: absolute;
+  bottom: -108px;
+  right: -64px;
+  z-index: 0;
 }
 
 .video-image {
@@ -446,6 +502,8 @@ header ul li {
   border: 4px solid #ffa000;
   border-radius: 4px;
   margin-bottom: 12px;
+  position: absolute;
+  z-index: 2;
 }
 
 .play-video-button {
@@ -455,6 +513,7 @@ header ul li {
   height: 42px;
   left: 46%;
   top: 44%;
+  z-index: 3;
   border-radius: 50%;
   background-color: #ffa000;
   background-image: url("https://softuni.bg/Content/images/apply-page/header-video-play-button-arrow.svg");
@@ -490,6 +549,7 @@ header ul li {
   height: 60px;
   top: 41%;
   left: 44%;
+  z-index: 4;
   -webkit-animation: spin 8s linear infinite;
   -moz-animation: spin 8s linear infinite;
   animation: spin 8s linear infinite;
@@ -498,13 +558,6 @@ header ul li {
 .video-rotator:hover {
   transform: scale(1.2);
   cursor: pointer;
-}
-
-.video p {
-  color: #bedae6;
-  text-align: center;
-  font-size: 14px;
-  line-height: 16px;
 }
 
 .reviews {
@@ -536,6 +589,10 @@ header ul li {
   display: flex;
   flex-flow: column;
   height: 20px;
+}
+
+.ratings p {
+  margin-top: 2px;
 }
 
 .stars {
@@ -644,4 +701,680 @@ header ul li {
 
 .container-pros span {
   margin-bottom: 30px;
+}
+
+.apply-container-stats {
+  background-color: #234465;
+}
+
+.container-stats {
+  display: flex;
+  justify-content: center;
+}
+
+.container-stats-info {
+  display: flex;
+  flex-flow: column;
+  color: #fff;
+}
+
+.top-row,
+.bottom-row {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  width: 625px;
+  gap: 25px;
+}
+
+.container-stats-info {
+  text-align: end;
+}
+
+.container-stats-info h1 {
+  font-size: 72px;
+  margin: 34px 0;
+  justify-self: end;
+  width: 228px;
+}
+
+.container-stats-info span {
+  align-self: center;
+  text-align: start;
+}
+
+.container-stats-imgs {
+  position: relative;
+  width: 335px;
+  height: 228px;
+}
+
+.container-stats-imgs img {
+  border-radius: 10px;
+}
+
+.top-img {
+  position: absolute;
+  left: 130px;
+  top: -30px;
+  z-index: 4;
+}
+
+.bottomleft-img {
+  position: absolute;
+  bottom: -105px;
+  left: 108px;
+  z-index: 4;
+}
+
+.mid-img {
+  position: absolute;
+  top: 30px;
+  right: -192px;
+  z-index: 2;
+}
+
+.midleft-img {
+  position: absolute;
+  left: 50px;
+  top: 30px;
+  z-index: 1;
+}
+
+.bottomright-img {
+  position: absolute;
+  right: -243px;
+  bottom: -107px;
+}
+
+.apply-container-steps {
+  display: flex;
+  justify-content: center;
+}
+
+.apply-container-content {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  padding: 60px 0;
+}
+
+.apply-content-info {
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+  color: #234465;
+}
+
+.apply-content-info h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+}
+
+.apply-content-info p {
+  align-self: center;
+  margin-bottom: 50px;
+  width: 550px;
+}
+
+.apply-steps {
+  display: flex;
+  gap: 30px;
+}
+
+.apply-steps p {
+  color: #fff;
+}
+
+.apply-steps h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-top: 0;
+}
+
+.step-1 h3,
+.step-2 h3 {
+  color: #234465;
+  position: relative;
+}
+
+.step-3 h3,
+.step-4 h3 {
+  color: #fff;
+}
+
+.step-info {
+  border-left: 4px solid #ffa000;
+}
+
+.step-1 span,
+.step-2 span {
+  color: #565656;
+}
+
+.step-1,
+.step-2,
+.step-2,
+.step-3,
+.step-4 {
+  position: relative;
+  width: 276px;
+  height: 430px;
+  padding: 24px 16px 40px 16px;
+  text-align: start;
+  border-radius: 4px;
+  box-shadow: 1px 1px 5px #706a6a;
+}
+
+.step-1 {
+  background-color: #e4f0f4;
+}
+
+.step-2 {
+  background-color: #bedae6;
+}
+
+.step-3 {
+  background-color: #629cbc;
+  color: #fff;
+}
+
+.step-4 {
+  background-color: #234465;
+  color: #fff;
+}
+
+.step-info-separate-containers {
+  display: grid;
+  grid-template-columns: 1fr 9fr;
+  gap: 15px;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.checklist-icon {
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+  border-radius: 50%;
+  background-size: contain;
+  z-index: 1;
+  background-image: url("https://softuni.bg/Content/images/icons/check-icon-yellow.svg");
+}
+
+.step-info-separate-containers::before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  bottom: -94px;
+  width: 4px;
+  height: 200px;
+  background-color: #ffa000;
+}
+
+.step-3 .step-info-separate-containers::before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  bottom: -145px;
+  width: 4px;
+  height: 284px;
+  background-color: #ffa000;
+}
+
+.step-4 .step-info-separate-containers::before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  bottom: -63px;
+  width: 4px;
+  height: 110px;
+  background-color: #ffa000;
+}
+
+.professions-list {
+  display: grid;
+  grid-template-columns: 36px 36px;
+  gap: 15px;
+  margin-left: 38px;
+}
+
+.apply-steps p {
+  position: absolute;
+  bottom: -32px;
+  left: 33%;
+  padding: 6px;
+  border-radius: 4px;
+  background-color: #029a3c;
+}
+
+.apply-container-content .apply-btn {
+  margin: 0 auto;
+  margin-top: 60px;
+  padding: 16px 48px;
+  font-size: 18px;
+}
+
+.apply-container-content .apply-btn:hover {
+  box-shadow: none;
+}
+
+.apply-container-benefits {
+  display: flex;
+  justify-content: center;
+  background-color: #fff8e1;
+  height: 320px;
+}
+
+.container-benefits {
+  display: flex;
+  gap: 150px;
+  padding: 24px 0;
+}
+
+.benefits-info {
+  width: 635px;
+  color: #565656;
+  padding: 10px 0;
+}
+
+.benefits-info ul {
+  list-style: none;
+}
+
+.benefits-info li {
+  position: relative;
+}
+
+.benefits-info p {
+  width: 600px;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.benefits-images {
+  position: relative;
+  width: 327px;
+  height: 225px;
+}
+
+.benefits-images img {
+  position: absolute;
+}
+
+.img-1 {
+  top: -45px;
+  right: -90px;
+  z-index: 3;
+}
+
+.img-2 {
+  bottom: -135px;
+  left: -60px;
+  z-index: 2;
+}
+
+.img-3 {
+  bottom: -92px;
+  right: 112px;
+  z-index: 1;
+}
+
+.benefits-info li {
+  display: flex;
+}
+
+.benefits-info .checklist-icon {
+  background-image: url("https://softuni.bg/Content/images/icons/check-icon-yellow.svg");
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background-size: contain;
+  z-index: 1;
+}
+
+.benefits-info {
+  text-align: start;
+}
+
+.container-teachers {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+  gap: 40px;
+  padding: 60px 0;
+}
+
+.teachers-info {
+  width: 680px;
+}
+
+.teachers-info h2 {
+  color: #234465;
+  font-size: 34px;
+}
+
+.teachers-info p {
+  color: #565656;
+  letter-spacing: 0.1px;
+}
+
+.apply-container-faqs {
+  background-color: #f8f8f8;
+}
+
+.container-faqs {
+  display: flex;
+  justify-content: center;
+  gap: 130px;
+}
+
+.faqs ul {
+  list-style: none;
+}
+
+.faqs-contact-us {
+  align-self: center;
+  width: 260px;
+  height: 240px;
+  padding: 24px 24px;
+  background-color: #fff;
+  box-shadow: 0px 1px 1px rgb(59, 59, 59);
+}
+
+.faqs-contact-us h4 {
+  margin-top: 10px;
+  color: #234465;
+}
+.faqs-contact-us p {
+  color: #565656;
+  margin-bottom: 20px;
+}
+
+.faqs-email-number-container {
+  display: grid;
+  grid-template-columns: 1fr 9fr;
+  gap: 15px;
+}
+
+.email {
+  color: #565656;
+  text-decoration: underline;
+}
+
+.number {
+  color: #565656;
+}
+
+.number:hover {
+  text-decoration: underline;
+}
+
+.container-faqs {
+  padding: 50px 0;
+}
+
+.faqs li {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  background-color: #ffedb3;
+  height: 52px;
+  margin-bottom: 10px;
+  padding: 0 15px;
+}
+
+.faqs h2 {
+  color: #234465;
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+.faqs li:hover {
+  cursor: pointer;
+}
+
+.faqs-hoverable:hover .plus-rotator {
+  transform: scale(1.7) rotate(180deg);
+  left: 50%;
+}
+
+.plus-rotator {
+  transition: transform 0.7s ease-in-out;
+}
+
+.faqs img:hover {
+  transform: scale(1.7) rotate(180deg);
+  left: 50%;
+}
+
+.faqs p {
+  color: #565656;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.faqs img {
+  width: 25px;
+  height: 25px;
+  align-self: center;
+  background-color: #ffedb3;
+  margin-left: 20px;
+}
+
+.show-on-hover {
+  display: none;
+}
+
+.faqs-hoverable {
+  display: flex;
+}
+
+.shown-all-time {
+  display: flex;
+  justify-content: space-between;
+  background-color: #ffedb3;
+  height: 52px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.show-on-hover {
+  width: 797px;
+  padding: 15px 15px;
+  background-color: #fff8e1;
+  top: 52px;
+}
+
+.faqs-hoverable:hover + .show-on-hover {
+  display: block;
+  position: absolute;
+  z-index: 1;
+}
+
+.show-on-hover p {
+  color: #565656;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.hover-container {
+  position: relative;
+}
+
+.apply-container-students {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  background-color: #234465;
+  height: 356px;
+  padding: 48px 45px;
+}
+
+.students-info {
+  display: flex;
+}
+
+.student-photo {
+  height: 144px;
+  width: 144px;
+  border-radius: 50%;
+}
+
+.container-students {
+  width: 1170px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  gap: 50px;
+}
+
+.students-rating {
+  display: flex;
+}
+
+.students-rating img {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+.students-info {
+  display: flex;
+  flex-flow: column;
+  color: #fff;
+}
+
+.students-info h3 {
+  margin: 0 0 10px 0;
+  letter-spacing: 1px;
+}
+
+.students-info h4 {
+  color: #d6d6d6;
+  margin: 0 0 10px 0;
+}
+
+.students-info p {
+  letter-spacing: 0.1px;
+  width: 850px;
+}
+
+.dots {
+  position: absolute;
+  left: -40px;
+  top: 65px;
+}
+
+.arrow-img {
+  position: absolute;
+  right: 64px;
+  top: 10px;
+  width: 322px;
+  height: 339px;
+}
+
+.apply-container-students button {
+  position: absolute;
+  right: -25px;
+  top: 115px;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.right-arrow {
+  width: 15px;
+  height: 15px;
+  margin-left: 4px;
+  margin-top: 3px;
+}
+
+.apply-container-partners {
+  display: flex;
+  justify-content: center;
+}
+
+.container-partners {
+  width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 90px;
+  margin-bottom: 48px;
+  gap: 100px;
+}
+
+.partners-icons {
+  width: 480px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  gap: 20px;
+}
+
+.partners-icons img {
+  height: 48px;
+  padding: 0 17px;
+}
+
+.partners-info {
+  display: flex;
+  flex-flow: column;
+}
+
+.partners-info h1 {
+  color: #234465;
+  margin-bottom: 10px;
+}
+
+.partners-info p {
+  color: #565656;
+  margin-bottom: 40px;
+}
+
+.partners-info button {
+  width: 240px;
+  font-size: 16px;
+  box-shadow: 1px 1px 1px 1px #a09f9f;
+  border: none;
+  padding: 15px 0;
+  margin-bottom: 20px;
+}
+
+.partners-info button:hover {
+  box-shadow: none;
+}
+
+.partner-icons-row1,
+.partner-icons-row2,
+.partner-icons-row3 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.partners-icons button {
+  position: absolute;
+  right: -45px;
+  top: 75px;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.partners-icons .right-arrow {
+  width: 15px;
+  height: 15px;
+  padding: 0;
+  margin-left: 4px;
+  margin-top: 3px;
 }
