@@ -9,6 +9,10 @@ ol {
   padding: 0;
 }
 
+ul {
+  list-style: none;
+}
+
 @font-face {
   font-family: "Montserrat", sans-serif;
   src: url(/fonts/Montserrat-VariableFont_wght.woff2);
@@ -26,7 +30,7 @@ a {
   background-color: #234465;
 }
 
-header {
+.site-header {
   width: 1280px;
   height: 68px;
   margin: 0 auto;
@@ -41,7 +45,16 @@ header {
   font-weight: 700;
 }
 
-.main-nav:hover {
+.main-nav-list {
+  display: flex;
+  gap: 16px;
+}
+
+.main-nav-list > li {
+  position: relative;
+}
+
+.main-nav-page-link:hover {
   background-color: #306085;
   border-radius: 2px;
 }
@@ -54,19 +67,12 @@ header {
   display: flex;
   align-items: center;
   gap: 20px;
-}
-
-.logo-dropdown i {
   cursor: pointer;
 }
 
 .logo-dropdown:hover i {
   transform: rotate(90deg);
   transition: 0.6s;
-}
-
-.logo-dropdown a {
-  display: block;
 }
 
 .hidden-nav {
@@ -77,6 +83,8 @@ header {
   list-style: none;
   border-bottom-right-radius: 8px;
   border-bottom-left-radius: 8px;
+  z-index: 1;
+  opacity: 0.9;
 }
 
 .hidden-nav ul {
@@ -98,8 +106,6 @@ header {
 
 .logo-dropdown:hover + .hidden-nav {
   display: block;
-  position: absolute;
-  z-index: 1;
 }
 
 .hidden-nav:hover {
@@ -118,24 +124,14 @@ header {
   background-color: #fff;
 }
 
-header ul {
-  display: flex;
-  gap: 16px;
-  list-style: none;
-}
-
-header a {
+.site-header a {
   padding: 6px 8px;
 }
 
-header ul span {
+.site-header ul span {
   text-decoration: none;
   color: #fff;
   font-size: 12px;
-}
-
-header ul li {
-  position: relative;
 }
 
 .cell-arrow {
@@ -184,10 +180,6 @@ header ul li {
 
 .hidden-header a:hover {
   box-shadow: none;
-}
-
-.dropdown-trigger {
-  position: relative;
 }
 
 .hidden-menu {
