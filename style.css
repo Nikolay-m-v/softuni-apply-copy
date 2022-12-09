@@ -1378,3 +1378,154 @@ header ul li {
   margin-left: 4px;
   margin-top: 3px;
 }
+
+.apply-container-awards {
+  display: flex;
+  justify-content: space-around;
+  background-color: #f8f8f8;
+  padding: 65px 0;
+}
+
+.container-awards {
+  display: flex;
+  width: 1200px;
+  position: relative;
+  gap: 40px;
+}
+
+.award-content img {
+  width: 120px;
+  height: 65px;
+}
+
+.award-content {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.award-border {
+  width: 96px;
+  margin: 0 auto;
+  border-bottom: 3px solid #ffa000;
+}
+
+.award-info {
+  width: 260px;
+}
+
+.award-info p:first-child {
+  color: #ffa000;
+  font-size: 17px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.award-info p {
+  color: #565656;
+  text-align: center;
+  align-self: center;
+}
+
+.right-arrow-awards {
+  position: absolute;
+  top: 49%;
+  right: -15px;
+  width: 45px;
+  height: 45px;
+  border: 1px solid rgb(231, 231, 231);
+  box-shadow: 1px 1px 1px #363636;
+  padding: 13px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+footer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 60px 0;
+  background-color: #193047;
+  overflow: hidden;
+}
+
+.footer-image {
+  position: absolute;
+  right: -25px;
+  bottom: 50px;
+  width: 105px;
+}
+
+.footer-container {
+  width: 1170px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-container ul {
+  list-style: none;
+}
+
+.footer-container li {
+  margin: 12px 0;
+}
+
+.general-li {
+  color: #fff;
+  font-weight: 700;
+}
+
+.footer-container a {
+  font-size: 14px;
+  color: #d6d6d6;
+}
+
+.footer-container a:hover {
+  text-decoration: underline;
+}
+
+.socials-copyright {
+  width: 285px;
+}
+
+.socials ul {
+  display: flex;
+  gap: 20px;
+}
+
+.socials a:hover {
+  filter: contrast(3);
+}
+
+.twitter {
+  width: 19px;
+  height: 18px;
+}
+
+.youtube {
+  width: 26px;
+  height: 18px;
+}
+
+.instagram {
+  width: 18px;
+  height: 18px;
+}
+
+.payment-method {
+  display: flex;
+  gap: 20px;
+  margin: 45px 0;
+}
+
+.payment-method img {
+  border-radius: 4px;
+  width: 80px;
+  height: 41px;
+}
+
+.copyright p {
+  color: #919191;
+  font-size: 13px;
+}
